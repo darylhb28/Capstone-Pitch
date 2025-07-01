@@ -21,7 +21,7 @@
 
             GET /products/:id
 
-            🔒 GET /products/:user 
+            🔒 GET /products/:user_id
             shows a users current listed products
 
         /rentals router
@@ -33,11 +33,18 @@
 
             🔒 GET /rentals/:id
 
+            🔒 GET /rentals/:user_id
+            shows a users current rented products
+
         /messages router
 
             🔒 POST /messages
   
             🔒 GET /messages
+
+            🔒 GET /messages/:id
+
+            
   
 4. Front end Wireframe
     See Wireframe.png file
