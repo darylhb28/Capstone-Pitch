@@ -3,7 +3,7 @@
 
 2. Database Schema
 
-https://dbdiagram.io/d/Nomad-DB-6861665bf413ba350865b708
+    https://dbdiagram.io/d/Nomad-DB-6861665bf413ba350865b708
 
 3. List of API Endpoints
         /users router
