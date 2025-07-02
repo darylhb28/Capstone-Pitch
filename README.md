@@ -21,7 +21,7 @@
 
             GET /products/:id
 
-            🔒 GET /products/:user_id
+            🔒 GET /products/:user_id (save user_id in local storage on login)
             shows a users current listed products
 
         /rentals router
@@ -38,13 +38,15 @@
 
         /messages router
 
-            🔒 POST /messages
+            🔒 POST /messages 
+            (add logic to add look at users and products and add to thread or create one if needed)
   
             🔒 GET /messages
 
-            🔒 GET /messages/:id
+            🔒 GET /messages/:user_id 
+            (as host or renter)
 
-            
+
   
 4. Front end Wireframe
     See Wireframe.png file
