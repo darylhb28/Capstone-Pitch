@@ -1,9 +1,9 @@
 1. Project Elevator Pitch
-    A website/app for users to rent/loan seasonal outdoor equipment for vacations when an owner might not be using it, such as beach chairs/umbrellas, hiking equipment, climbing equipment, ski equipment, surfboards, kayaks and other watersport equipment. Its AirBnb for outdoors activity goods.
+    A website/app for users to play blackjack while getting reccomdation on basic strategy moves as they play hands. With each hand they will get a message on a reccomended action.
 
 2. Database Schema
 
-    https://dbdiagram.io/d/Nomad-DB-6861665bf413ba350865b708
+    https://drawsql.app/teams/fullstack-academy-12/diagrams/blackjack-basics
 
 3. List of API Endpoints
         /users router
@@ -13,44 +13,25 @@
             POST /users/login
         
             🔒 GET /users/me
-            Returns the currently logged-in user's data, rentals, listings, and messages
+            Returns the currently logged-in user's data, game history?
         
-        /products router
+        /strategy router
 
-            GET /products 
+            🔒 POST /strategy 
+            returns a reccommended action based on a users hand
 
-            GET /products/:id
+        /shoe router
 
-            🔒 GET /products/:user_id (save user_id in local storage on login)
-            shows a users current listed products
+            🔒 GET /playerhand
+            Gets card from shoe thats not drawn, marks it as drawn, adds card to player hand 
+            (twice for initial deal, once for hit)
 
-        /rentals router
+            🔒 GET /dealerhand
+            Gets card from shoe thats not drawn, marks it as drawn, adds card to dealer hand
+            (do this again for dealer down card reveal)
 
-            🔒 POST /rentals
-  
-            🔒 GET /rentals
-            sends array of all rentals made by the logged-in user
+            🔒 GET /newgame
+            Returns cards from hands back to shoe
 
-            🔒 GET /rentals/:id
-
-            🔒 GET /rentals/:user_id
-            shows a users current rented products
-
-        /messages router
-
-            🔒 POST /messages 
-            (add logic to add look at users and products and add to thread or create one if needed)
-  
-            🔒 GET /messages
-
-            🔒 GET /messages/:user_id 
-            (as host or renter)
-
-
-  
-4. Front end Wireframe
-    See Wireframe.png file
-
-5. User story
-    Unathenticated users will be able to view products available to rent, but won't be able to rent items, list items for rent, send messages, or see account details.
-    Authenticated users can rent items, list items, send messages, and see account details.
+4. User story
+ Only authenticated users can play and get tips
